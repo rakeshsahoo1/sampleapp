@@ -1,7 +1,7 @@
 import { HttpClient, HttpXhrBackend } from '@angular/common/http';
 export class NLocaleResource {
   //DEFAULT_LANGUAGE
-  defaultLcid;
+  defaultLcid = 'ar';
   locale = {};
   httpClient = new HttpClient(
     new HttpXhrBackend({ build: () => new XMLHttpRequest() })

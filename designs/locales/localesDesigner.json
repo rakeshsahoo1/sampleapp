@@ -2,7 +2,17 @@
     "en": {
         "localeId": "en",
         "localeName": "English",
+        "isDefaultLanguage": false,
+        "properties": {
+            "submitbutton": "Submit"
+        }
+    },
+    "ar": {
+        "localeId": "ar",
+        "localeName": "Arabic",
         "isDefaultLanguage": true,
-        "properties": {}
+        "properties": {
+            "submitbutton": "إرسال"
+        }
     }
 }

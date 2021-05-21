@@ -6464,7 +6464,7 @@
                             },
                             {
                                 "_key": "buttonname",
-                                "_value": "Submit",
+                                "_value": "{{locales.submitbutton}}",
                                 "_type": "a",
                                 "_attrDef": "p",
                                 "_useAsLabel": true
