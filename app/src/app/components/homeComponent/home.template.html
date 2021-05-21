@@ -1,0 +1,115 @@
+<div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+  <div fxLayout="row wrap" style="background-color:dodgerblue;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+    <h2 style="color:white;margin-left:20px;">
+      Hero Form</h2>
+  </div>
+  <form [formGroup]="sampleform" style="margin-top:20px;">
+    <div fxLayout="column wrap" style="margin-left:300px;margin-right:300px;padding:30px;;" class="shadow" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+        <h5 class="cls3">
+          Full Name</h5>
+        <h5 class="cls3">
+          Description</h5>
+      </div>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+        <mat-form-field class="cls4 cls3" [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput placeholder="Name* (required)" [required]="true" formControlName="name">
+          <mat-error align="start" *ngIf="sampleform.controls.name.errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+        <mat-form-field class="cls4 cls3" [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput placeholder="Description (optional)" [required]="false" formControlName="desc">
+
+        </mat-form-field>
+      </div>
+      <div fxLayout="row wrap" style="margin-top:-70px;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+        <h5 class="cls5">
+          Email</h5>
+        <h5 class="cls5">
+          Date</h5>
+        <h5 style="margin-left:10px;" class="cls5">
+          Select</h5>
+      </div>
+      <div fxLayout="row wrap" style="margin-top:-80px;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+        <mat-form-field class="cls5" [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput placeholder="Email (valid email only)" [required]="false" formControlName="email">
+          <mat-error align="start" *ngIf="sampleform.controls.email.errors?.email">Invalid email .</mat-error>
+        </mat-form-field>
+        <mat-form-field style="margin-top:0px;margin-right:10px;" [appearance]="&apos;fill&apos;">
+          <input matInput placeholder="Date" [matDatepicker]="picker" formControlName="date" [required]="false" [disabled]="false">
+          <mat-datepicker-toggle matSuffix [for]="picker" disabled="false"></mat-datepicker-toggle>
+          <mat-datepicker #picker [disabled]="false"></mat-datepicker>
+
+        </mat-form-field>
+        <mat-form-field [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;">
+          <mat-select style="margin-top:0px;" formControlName="selectvalue" class="cls5" placeholder="Select" [required]="false">
+            <ng-template ngFor let-option [ngForOf]="selectdata" let-i="index">
+              <mat-option [value]="option">{{option}}</mat-option>
+            </ng-template>
+          </mat-select>
+
+        </mat-form-field>
+      </div>
+      <div fxLayout="row wrap" style="margin-top:-70px;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+        <h5 class="cls3">
+          Password</h5>
+        <h5 class="cls3">
+          Confirm Password</h5>
+      </div>
+      <div fxLayout="row wrap" style="margin-bottom: -100px;" class="cls4" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+        <mat-form-field class="cls3" [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput placeholder="Password* (required)" [required]="false" formControlName="password1">
+          <mat-error align="start" *ngIf="sampleform.controls.password1.errors?.required">this field is required .</mat-error>
+        </mat-form-field>
+        <mat-form-field class="cls3" [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput placeholder="Confirm Password* (required and match)" [required]="false" formControlName="password2">
+          <mat-error align="start" *ngIf="sampleform.controls.password2.errors?.required">this filed is required .</mat-error>
+          <mat-error align="start" *ngIf="sampleform.controls.password2.errors?.confirmedValidator">Password and Confirm Password must be match.</mat-error>
+        </mat-form-field>
+      </div>
+      <div fxLayout="row wrap" style="margin-top:10px;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+        <h5 class="cls3">
+          Phone Number</h5>
+        <h5 class="cls3">
+          Mobile</h5>
+      </div>
+      <div fxLayout="row wrap" class="cls4" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+        <mat-form-field class="cls3" [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput placeholder="Phone Number (max length 10)" [required]="false" formControlName="phonenumber">
+          <mat-error align="start" *ngIf="sampleform.controls.phonenumber.errors?.maxlength">the length of this input must be 10 characters or fewer.</mat-error>
+        </mat-form-field>
+        <mat-form-field class="cls3" [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput placeholder="mobile (min length 5)" [required]="false" formControlName="mobile">
+          <mat-error align="start" *ngIf="sampleform.controls.mobile.errors?.minlength">the length of this input must be 5 characters or more .</mat-error>
+        </mat-form-field>
+      </div>
+      <div fxLayout="row wrap" style="margin-top:-70px;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+        <h5 class="cls3">
+          Enter a number</h5>
+        <h5 class="cls3">
+          Enter a number</h5>
+      </div>
+      <div fxLayout="row wrap" style="margin-bottom: -100px;" class="cls4" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+        <mat-form-field class="cls3" [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput placeholder="enater a number (max value 15)" [required]="false" formControlName="maxvalue">
+          <mat-error align="start" *ngIf="sampleform.controls.maxvalue.errors?.max">Value should not greater than 15 .</mat-error>
+        </mat-form-field>
+        <mat-form-field class="cls3" [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput placeholder="enter a number (min value 5)" [required]="false" formControlName="minvalue">
+          <mat-error align="start" *ngIf="sampleform.controls.minvalue.errors?.min">value should be greater than 5 .</mat-error>
+        </mat-form-field>
+      </div>
+      <h5>
+        Enter a number</h5>
+      <mat-form-field class="cls4" [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+        <input matInput placeholder="Enter A Number (accept number only)" [required]="false" formControlName="numbervalidation">
+        <mat-error align="start" *ngIf="sampleform.controls.numbervalidation.errors?.pattern">must be a number .</mat-error>
+      </mat-form-field>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+        <mat-checkbox value="yes" [required]="false" formControlName="tac"></mat-checkbox>
+        <h5 style="margin-top:  2px;margin-left:5px;">
+          Acepts Terms and Conditions</h5>
+      </div>
+      <div fxLayout="row wrap" fxLayoutGap="30px" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="false">Submit</button><button mat-raised-button color="warn" type="reset">Clear</button></div>
+    </div>
+  </form>
+</div>

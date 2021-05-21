@@ -1,0 +1,48 @@
+/*Importing default angular material css theme. */
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "nDefaults.scss";
+
+*{
+    font-family: sans-serif;
+}
+
+.cls1{
+    width: 180px;
+}
+.shadow{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cls3{
+    width: 48%;
+    margin: 5px;
+}
+.cls5{
+    width: 30%;
+    margin-right: 8px;
+}
+.cls4{
+    margin-top: -30px;
+}
+.border{
+    border: 1px solid red;
+}
+.border1{
+    border: 1px solid blueviolet;
+}
+.border2{
+    border: 1px solid green;
+}
+.col1-backgroung{
+    background-color: blueviolet;
+}
+.col2-backgroung{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.col3-backgroung{
+    background-color: rgba(0, 0, 0, 0.01);
+}
+.drop-down-link:hover{
+    color: blueviolet;
+}

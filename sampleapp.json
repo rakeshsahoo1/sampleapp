@@ -1,0 +1,13 @@
+{
+    "displayName": "sampleapp",
+    "appName": "sampleapp",
+    "description": "angular sample app",
+    "lastModified": "2021-05-19T05:18:54.010Z",
+    "imgSourcePath": "",
+    "version": "1.0.0",
+    "appType": "classic",
+    "templateName": "blank",
+    "createDate": "2021-05-19T05:18:51.876Z",
+    "analyticsId": "e96bba80-8543-6cf9-c06b-51030c4d7604",
+    "createdStudioVersion": "7.7.2"
+}
